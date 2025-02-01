@@ -11,3 +11,12 @@ def det(A):
     return det
 def matrice_identite(n):
     return [[1 if i == j else 0 for j in range(n)] for i in range(n)]
+def multiplier_matrices(A, B):
+    n = len(A)
+    C = [[0 for _ in range(n)] for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            C[i][j] = sum(A[i][k] * B[k][j] for k in range(n))
+    return C
+def echanger_lignes(A, i, j):
+    A[i], A[j] = A[j], A[i]
