@@ -20,3 +20,12 @@ def multiplier_matrices(A, B):
     return C
 def echanger_lignes(A, i, j):
     A[i], A[j] = A[j], A[i]
+
+def trouver_pivot_max(A, k, n):
+    pivot_max = abs(A[k][k])
+    index_max = k
+    for i in range(k+1, n):
+        if abs(A[i][k]) > pivot_max:
+            pivot_max = abs(A[i][k])
+            index_max = i
+    return index_max
