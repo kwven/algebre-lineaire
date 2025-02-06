@@ -59,3 +59,6 @@ def est_diagonale_dominant(A):
     return True
 
 #
+def copier(A):
+    return A
+
