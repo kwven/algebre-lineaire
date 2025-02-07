@@ -62,3 +62,19 @@ def est_diagonale_dominant(A):
 def copier(A):
     return A
 
+#
+
+def symetrique(A):
+    n = len(A)
+    for i in range(n):
+        for j in range(n):
+            if A[i][j] != A[j][i]:
+                return False
+    return True
+
+#
+def norme(A):
+    a=0
+    for i in A:
+        a+=i[0]**2
+    return a**(1/2)
